@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54557CEF-1717-4E82-8B16-939B39A677D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>openvncViewer</RootNamespace>
+    <AssemblyName>openvncViewer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="DesktopWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\bindings\csharp\DebugCallback.cs">
+      <Link>openvnc\DebugCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\OpenVNCWRAP.cs">
+      <Link>openvnc\OpenVNCWRAP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\OpenVNCWRAPPINVOKE.cs">
+      <Link>openvnc\OpenVNCWRAPPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClient.cs">
+      <Link>openvnc\vncClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClientCallback.cs">
+      <Link>openvnc\vncClientCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClientEvent.cs">
+      <Link>openvnc\vncClientEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClientEventType_t.cs">
+      <Link>openvnc\vncClientEventType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClientObject.cs">
+      <Link>openvnc\vncClientObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncClientState_t.cs">
+      <Link>openvnc\vncClientState_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncEngine.cs">
+      <Link>openvnc\vncEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncEngineObject.cs">
+      <Link>openvnc\vncEngineObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncError_t.cs">
+      <Link>openvnc\vncError_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncNetIPVersion_t.cs">
+      <Link>openvnc\vncNetIPVersion_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncNetworkType_t.cs">
+      <Link>openvnc\vncNetworkType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncObject.cs">
+      <Link>openvnc\vncObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbClientMsg_t.cs">
+      <Link>openvnc\vncRfbClientMsg_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbEncoding_t.cs">
+      <Link>openvnc\vncRfbEncoding_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbMsgType_t.cs">
+      <Link>openvnc\vncRfbMsgType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbPixelFormat_t.cs">
+      <Link>openvnc\vncRfbPixelFormat_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbPixelReaderType_t.cs">
+      <Link>openvnc\vncRfbPixelReaderType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbPixelSize_t.cs">
+      <Link>openvnc\vncRfbPixelSize_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbRectangle_t.cs">
+      <Link>openvnc\vncRfbRectangle_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbSecurityResult_t.cs">
+      <Link>openvnc\vncRfbSecurityResult_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbSecurity_t.cs">
+      <Link>openvnc\vncRfbSecurity_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbServerMsg_e.cs">
+      <Link>openvnc\vncRfbServerMsg_e.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbSize_t.cs">
+      <Link>openvnc\vncRfbSize_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRfbVersion_t.cs">
+      <Link>openvnc\vncRfbVersion_t.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncRunnable.cs">
+      <Link>openvnc\vncRunnable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncServer.cs">
+      <Link>openvnc\vncServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncServerObject.cs">
+      <Link>openvnc\vncServerObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\bindings\csharp\vncServerState_t.cs">
+      <Link>openvnc\vncServerState_t.cs</Link>
+    </Compile>
+    <Compile Include="DesktopWindow.xaml.cs">
+      <DependentUpon>DesktopWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\vncEventArgs.cs" />
+    <Compile Include="Events\vncEventHandlerTrigger.cs" />
+    <Compile Include="Events\vncKeyEventArgs.cs" />
+    <Compile Include="Events\vncMouseEventArgs.cs" />
+    <Compile Include="Events\vncStringEventArgs.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="vncKeyEvent.cs" />
+    <Compile Include="vncVideoDisplay.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\16\fullscreen_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\24\fullscreen_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\32\fullscreen_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\48\fullscreen_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\64\fullscreen_64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="openvncViewer.DesktopWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DesktopWindow" Height="436" Width="585" Loaded="Window_Loaded" Closing="Window_Closing" Closed="Window_Closed">
+    <Grid Name="grid">            
+        <Menu Height="28" Name="menu" VerticalAlignment="Top" Background="SkyBlue" FontWeight="Normal" FontSize="14" BorderBrush="SkyBlue" BorderThickness="1">
+            <MenuItem Name="MenuItemFullScreen" Padding="0,0,0,0" ToolTip="Full Screen" Click="MenuItemFullScreen_Click">
+                <MenuItem.Icon>
+                    <Image Source="/openvncViewer;component/images/24/fullscreen_24.png" Stretch="None" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Name="MenuItemKeys" Padding="0,0,0,0" ToolTip="Keys">
+                <MenuItem.Icon>
+                    <Image Source="/openvncViewer;component/images/24/fullscreen_24.png" Stretch="None" />
+                </MenuItem.Icon>
+                <MenuItem Name="MenuItemKeys_CtrlAltDel" Padding="0,0,0,0" Header="Ctrl+Alt+Del" Click="MenuItemKeys_CtrlAltDel_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/openvncViewer;component/images/24/fullscreen_24.png" Stretch="None" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Border Margin="0,28,0,0" Name="videoPlaceholder" Background="White" Cursor="Arrow" Panel.ZIndex="0" />
+    </Grid>
+</Window>
